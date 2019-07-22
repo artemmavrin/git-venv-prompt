@@ -79,6 +79,9 @@ git_venv_prompt() {
     # \$ is the bash prompt
     PS1+="$orange\$$reset "
 
+    # Add user@host information
+    PS1="$violet\u@\h$reset:$PS1"
+
     export PS1
 }
 
