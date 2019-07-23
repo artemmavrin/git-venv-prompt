@@ -11,6 +11,7 @@ Features
 
 The prompt can be read as follows:
 
+* The username and host are displayed in violet
 * The current directory name is displayed in blue
 * If the current directory is part of a Git repository, the prompt will show
 
@@ -24,7 +25,7 @@ The prompt can be read as follows:
 Usage
 -----
 
-Download the script `git_venv_prompt.sh <git_venv_prompt.sh>`__ to your home directory and add the following line to your ~/.bashrc or ~/.bash_profile file:
+Download the script `git_venv_prompt.sh <git_venv_prompt.sh>`__ to your home directory and add the following line to your ``~/.bashrc`` or ``~/.bash_profile`` file:
 
 
 .. code:: shell
