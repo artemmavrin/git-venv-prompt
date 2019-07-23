@@ -1,0 +1,26 @@
+mkdir repo; cd repo
+git init --quiet
+touch file
+git add file
+git commit -m "Created file" --quiet
+echo >> file
+git add file
+git commit -m "Updated file" --quiet
+touch file2 file3
+echo >> file
+git add file2 file3
+git commit -m "Created file2 and file3" --quiet
+git checkout -b new_branch --quiet
+git add file
+git commit -m "Updated file" --quiet
+git checkout master --quiet
+mkdir subdir
+touch file4 subdir/file5
+cd subdir
+git add file5
+git add ../file4
+cd ..
+python -m venv ./.venv
+source .venv/bin/activate
+deactivate
+cd ..
