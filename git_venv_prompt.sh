@@ -12,8 +12,8 @@ git_venv_prompt() {
 
     local status=""
 
-    # \W is the current directory
-    PS1="$blue\W$reset "
+    # Add <user>@<host>:<current directory> information
+    PS1="$violet\u@\h$reset:$blue\W$reset "
 
     # Check that we're in a directory managed by git
     if $(git rev-parse &> /dev/null); then
@@ -78,9 +78,6 @@ git_venv_prompt() {
 
     # \$ is the bash prompt
     PS1+="$orange\$$reset "
-
-    # Add user@host information
-    PS1="$violet\u@\h$reset:$PS1"
 
     export PS1
 }
